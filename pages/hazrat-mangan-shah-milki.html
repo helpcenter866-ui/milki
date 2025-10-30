@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazrat Data Mangan Shah Rahmatullah Alaih - Milki Village</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #ffd700 !important;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-link {
+            color: #fff !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        /* Carousel Section */
+        .carousel-section {
+            margin-top: 80px;
+            padding: 0;
+        }
+
+        .carousel-item {
+            height: 600px;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 50px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(30, 126, 52, 0.95) 0%, rgba(40, 167, 69, 0.95) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e7e34" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e7e34;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700, #28a745);
+            border-radius: 2px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .info-card h3 {
+            color: #28a745;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%);
+            border-radius: 15px;
+            padding: 40px;
+            color: white;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(30, 126, 52, 0.3);
+        }
+
+        .highlight-box h3 {
+            color: #ffd700;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-box ul li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .highlight-box ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .stat-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-box i {
+            font-size: 3rem;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .stat-box h4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e7e34;
+            margin: 10px 0;
+        }
+
+        .stat-box p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .committee-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .committee-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #28a745;
+        }
+
+        .committee-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);
+        }
+
+        .committee-card h4 {
+            color: #1e7e34;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .committee-card .position {
+            color: #28a745;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .committee-card .contact {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 350px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h5 {
+            color: #ffd700;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #155724 0%, #28a745 100%) !important;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-title {
+            color: #ffd700;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #1e7e34;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .carousel-item {
+                height: 400px;
+            }
+            .carousel-caption h5 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 80px; width: 80px; margin-right: 10px;"> मिल्की
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fs-5 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">मुख्य पृष्ठ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="institutionDropdown" role="button" data-bs-toggle="dropdown">
+                            शैक्षणिक संस्थान
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="madarsha-islamia-mangan-shah.html">मदरसा इस्लामिया मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="middle-school-milki.html">राजकीयकृत मध्य विद्यालय मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item" href="high-school-milki-mirachak.html">उच्च माध्यमिक विद्यायल मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item" href="kasturba-vidyalaya-milki.html">कस्तूरबा गांधी बालिका विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-milki.html">प्राथमिक विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-maktab-milki.html">प्राथमिक विद्यालय मक़तब मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-shek-tola-milki.html">प्राथमिक विद्यालय शेख टोला मिल्की</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="religiousDropdown" role="button" data-bs-toggle="dropdown">
+                           धार्मिक स्थल
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="raza-jama-masjid-milki.html">रज़ा जामा मस्जिद मिल्की</a></li>
+                            <li><a class="dropdown-item active" href="hazrat-mangan-shah-milki.html">हज़रत दाता मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="masjide-ansar.html">मस्जिदे अंसार</a></li>
+                            <li><a class="dropdown-item" href="hazrat-akbar-shah.html">हज़रत अकबर शाह रहमतुल्लाह अलैह</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leadership.html">नेतृत्व</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="committee.html">समिति</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">गैलरी</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/Mangan_Shah/image3.png" class="d-block w-100" alt="Hazrat Mangan Shah Dargah">
+                    <div class="carousel-caption">
+                        <h5>Hazrat Data Mangan Shah Rahmatullah Alaih</h5>
+                        <p>A Symbol of Faith and Unity</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/Mangan_Shah/image6.png" class="d-block w-100" alt="Annual Urs Festival">
+                    <div class="carousel-caption">
+                        <h5>Annual Urs Celebration</h5>
+                        <p>Thousands Gather in Devotion</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/Mangan_Shah/image7.png" class="d-block w-100" alt="Sacred Shrine">
+                    <div class="carousel-caption">
+                        <h5>Sacred Shrine of Blessings</h5>
+                        <p>250+ Years of Spiritual Heritage</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 data-aos="fade-up">हज़रत दाता मंगन शाह रहमतुल्लाह अलैह</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">मिल्की, बिहपुर में सामुदायिक सद्भाव का प्रतीक</p>
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section class="py-4" style="background-color: #fff3cd; color: #664d03;">
+        <div class="container text-center" data-aos="zoom-in">
+            <h3 class="fw-bold mb-3"><i class="fas fa-bell me-2"></i>सूचना: वार्षिक उर्स मेला 2026</h3>
+            <p class="fs-4 mb-1">
+                अगला वार्षिक उर्स मेला <strong class="text-danger">4 फरवरी, 2026</strong> को आयोजित किया जाएगा।
+            </p>
+            <p class="fs-5">
+                (इस्लामी कैलेंडर के अनुसार: <strong>शाबान की 16 तारीख</strong>)
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="info-card" data-aos="fade-up">
+                <p><strong>भागलपुर (बिहार) के बिहपुर के मिल्की </strong>गांव में स्थित <strong>हजरत दाता मंगन शाह रहमतुल्लाह अलैह</strong> की दरगाह सांप्रदायिक सद्भाव और एकता की एक जीती-जागती मिसाल है। हर साल 16 अप्रैल से महीने के आखिर तक यहां सालाना उर्स मेला लगता है, जिसमें भारत और विदेश से हजारों श्रद्धालु आते हैं।</p>
+                
+                <p class="mt-3">इस दरगाह की सबसे खास परंपरा यह है कि उर्स के दौरान पहली रस्म वाली चादर (चढ़ावे का कपड़ा) आधी रात ठीक 12:05 बजे चढ़ाता है, और यह रस्म पीढ़ियों से चली आ रही है।</p>
+            </div>
+
+            <div class="stats-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-box">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>250+</h4>
+                    <p>वर्षों पुरानी दरगाह</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-users"></i>
+                    <h4>5 Lakh +</h4>
+                    <p>वार्षिक श्रद्धालु</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>शाबान की 16 तारीख</h4>
+                    <p>वार्षिक उर्स मेला</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>40 KM</h4>
+                    <p>भागलपुर के उत्तर</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history me-2"></i>ऐतिहासिक पृष्ठभूमि</h3>
+                            <p>कहा जाता है कि राजाओं और राजकुमारों के ज़माने में, मंगन शाह नाम के एक सूफी संत <strong>राजा झप्पन सिंह</strong> के संरक्षण में रहते थे। जब राजा के बेटे पर झूठा आरोप लगाकर अंग्रेजों ने उसे मौत की सज़ा सुनाई, तो मंगन शाह ने राजा को भरोसा दिलाया कि उनका बेटा सुरक्षित वापस आ जाएगा - और चमत्कारिक रूप से वह आ भी गया। उनकी दिव्य शक्तियों को पहचानकर लोग मंगन शाह को संत मानने लगे।</p>
+                        </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3><i class="fas fa-hands-praying me-2"></i>सामूहिक आस्था</h3>
+                        <p>उर्स के दौरान, <strong>हिंदू और मुस्लिम एक साथ प्रार्थना करते हैं</strong>, संत से आशीर्वाद की कामना करते हैं। स्थानीय लोगों का मानना है कि <strong>कोई भी श्रद्धालु दरगाह से खाली हाथ नहीं लौटता</strong>।</p>
+                        <p class="mt-3">दरगाह समिति के अनुसार, पहली चादर आज भी एक <strong>बंगाली कायस्थ परिवार</strong> द्वारा चढ़ाई जाती है, जैसा कि लंबे समय पहले राजा झप्पन सिंह द्वारा आदेशित किया गया था - यह परंपरा आज भी जारी है।</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box" data-aos="zoom-in">
+                <h3><i class="fas fa-star me-2"></i>मान्यताएं और चमत्कार</h3>
+                <ul>
+                        <li>दरगाह, जो लगभग 250 वर्ष पुरानी है, हर साल लगभग पांच लाख श्रद्धालुओं को आकर्षित करती है</li>
+                        <li>कई संतानहीन दंपत्ति यहाँ बच्चों के लिए प्रार्थना करने आते हैं।</li>
+                        <li>महिलाएं अपनी पोशाक से एक कपड़े का टुकड़ा दरगाह पर बांधती हैं, यह मानते हुए कि उनकी इच्छा पूरी होगी</li>
+                        <li>जब उनकी इच्छा पूरी हो जाती है, तो वे आभार व्यक्त करने के लिए बाँधे हुए कपड़े के टुकड़े को खोल देती हैं।</li>
+                        <li>यह दरगाह सभी श्रद्धालुओं को आशीर्वाद देने के लिए जानी जाती है जो सच्चे विश्वास के साथ आते हैं|</li>
+                </ul>
+            </div>
+
+            <div class="info-card" data-aos="fade-up">
+                <h3><i class="fas fa-heart me-2"></i>अंतिम विचार</h3>
+                <p>भागलपुर से 40 किमी उत्तर में स्थित, <strong>मांगन शाह दरगाह</strong> केवल एक धार्मिक स्थल नहीं है — यह <strong>शांति, भक्ति और भाईचारे का प्रतीक</strong> है, जहाँ सभी धर्मों के लोग <strong>संत की कृपा में विश्वास और आशा के साथ</strong> एकत्र होते हैं।</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="committee-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">उर्स इंतजामिया कमिटी हजरत दाता मंगन शाह रहमतुल्लाह अलैह</h2>
+            
+            <div class="committee-grid">
+                <div class="committee-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../img/member/Jainul.jpg"alt="मो० जैनुल अंसारी" class="committee-img">
+                    <h4>मो० जैनुल अंसारी</h4>
+                    <p class="position">खजांची</p>
+                </div>
+
+                <div class="committee-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="committee-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>मो० इरफ़ान आलम </h4>
+                    <p class="position">सदर</p>
+                   
+                </div>
+
+                <div class="committee-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="committee-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>हजरत बाबु अली कौनेन खान फरीदी</h4>
+                    <p class="position">सदर</p>
+                  
+                </div>
+
+                <div class="committee-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="committee-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>मो० अबुल हसन</h4>
+                    <p class="position">सचिव</p>
+                    
+                </div>
+
+                <div class="committee-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="committee-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>असद राही</h4>
+                    <p class="position">उप सचिव</p>
+                  
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">पवित्र क्षणों की फोटो</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="../img/Mangan_Shah/image1.png" alt="Dargah View 1">
+                    <div class="gallery-overlay">
+                        <h5>मजार का संपूर्ण चित्र</h5>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="../img/Mangan_Shah/image2.png" alt="Dargah View 2">
+                    <div class="gallery-overlay">
+                        <h5>पवित्र दरगाह</h5>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="../img/Mangan_Shah/image4.png" alt="Dargah View 4">
+                    <div class="gallery-overlay">
+                        <h5>अन्य प्रवेश द्वार</h5>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="../img/Mangan_Shah/image5.png" alt="Dargah View 5">
+                    <div class="gallery-overlay">
+                        <h5>बाएँ कोना ओर से मजार का नज़ारा</h5>
+                    </div>
+                </div>
+                
+                <!-- <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="../img/Mangan_Shah/image8.png" alt="Dargah View 8">
+                    <div class="gallery-overlay">
+                        <h5>Festival Celebration</h5>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="../img/Mangan_Shah/image9.png" alt="Dargah View 9">
+                    <div class="gallery-overlay">
+                        <h5>Spiritual Atmosphere</h5>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title d-flex align-items-center">
+                        <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 28px; width: 28px; margin-right: 10px;">Milki
+                    </h5>
+                    <p>भागलपुर जिले का एक सांप्रदायिक सौहार्द और संस्कृति से समृद्ध ग्राम, जहाँ सभी धर्म और जातियों के लोग मिल-जुलकर रहते हैं और अपने त्योहारों तथा धार्मिक आयोजनों को उत्साहपूर्वक मनाते हैं।</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="pages/leadership.html" class="text-white-50 text-decoration-none">नेतृत्व</a></li>
+                        <li class="mb-2"><a href="pages/gallery.html" class="text-white-50 text-decoration-none">गैलरी</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i> milkithb@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> मिल्की, बिहपुर, बिहार, भारत (853201)</p>
+                </div>
+            </div>
+            
+            <hr class="bg-white-50 my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Milki Village. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed & Developed by <span class="text-warning fw-bold">Team's of Raza Road</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
