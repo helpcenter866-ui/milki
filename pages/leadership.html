@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership - Milki Village</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .leader-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e7e34;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 2px;
+        }
+        .leader-card {
+            background: #1e7e34;
+            color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .leader-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffd700;
+            margin: 0 auto 20px;
+        }
+        .leader-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+        .leader-post {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 80px; width: 80px; margin-right: 10px;"> मिल्की
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fs-5 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">मुख्य पृष्ठ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="institutionDropdown" role="button" data-bs-toggle="dropdown">
+                            शैक्षणिक संस्थान
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="madarsha-islamia-mangan-shah.html">मदरसा इस्लामिया मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="middle-school-milki.html">राजकीयकृत मध्य विद्यालय मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item" href="high-school-milki-mirachak.html">उच्च माध्यमिक विद्यायल मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item" href="kasturba-vidyalaya-milki.html">कस्तूरबा गांधी बालिका विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-milki.html">प्राथमिक विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-maktab-milki.html">प्राथमिक विद्यालय मक़तब मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-shek-tola-milki.html">प्राथमिक विद्यालय शेख टोला मिल्की</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="religiousDropdown" role="button" data-bs-toggle="dropdown">
+                           धार्मिक स्थल
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="raza-jama-masjid-milki.html">रज़ा जामा मस्जिद मिल्की</a></li>
+                            <li><a class="dropdown-item" href="hazrat-mangan-shah-milki.html">हज़रत दाता मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="masjide-ansar.html">मस्जिदे अंसार</a></li>
+                            <li><a class="dropdown-item" href="hazrat-akbar-shah.html">हज़रत अकबर शाह रहमतुल्लाह अलैह</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="leadership.html">नेतृत्व</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="committee.html">समिति</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">गैलरी</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="leader-section" style="margin-top: 100px;">
+        <div class="container">
+            <h1 class="section-title text-center" data-aos="fade-up">ग्राम पंचायत बिहपुर पूरब नेतृत्व</h1>
+
+            <!-- Main Leaders -->
+            <div class="row justify-content-center g-4 mb-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/member/Mukhiya.jpg" alt="Mukhiya" class="leader-img">
+                        <h3 class="leader-name">मो० सलाहुद्दीन</h3>
+                        <p class="leader-post">मुखिया</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Samiti Member" class="leader-img">
+                        <h3 class="leader-name">नेहा प्रवीण</h3>
+                        <p class="leader-post">समिति सदस्य</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Sarpanch" class="leader-img">
+                        <h3 class="leader-name">मो० रियाज अंसारी</h3>
+                        <p class="leader-post">सरपंच</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ward Members -->
+            <h2 class="section-title text-center mt-5" data-aos="fade-up">वार्ड सदस्य</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Row 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">रंजु देवी</h3>
+                        <p class="leader-post">वार्ड नं० 1</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">खुशबु खातुन</h3>
+                        <p class="leader-post">वार्ड नं० 2</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-card">
+                        <img src="../img/member/Jainul1.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">मो० जैनुल अंसारी</h3>
+                        <p class="leader-post">वार्ड नं० 3</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">नासना प्रवीण</h3>
+                        <p class="leader-post">वार्ड नं० 4</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">मो० मकसुद</h3>
+                        <p class="leader-post">वार्ड नं० 5</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">अनिल कुमार दुबे</h3>
+                        <p class="leader-post">वार्ड नं० 6</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">संतोष कुमार राय</h3>
+                        <p class="leader-post">वार्ड नं० 7</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-card">
+                        <img src="../img/member/wardno8.png" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">मो० फैयाज आलम </h3>
+                        <p class="leader-post">वार्ड नं० 8</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">मीरा शर्मा</h3>
+                        <p class="leader-post">वार्ड नं० 9</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">मो० महफुज आलम </h3>
+                        <p class="leader-post">वार्ड नं० 10</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">साहिदा खातुन</h3>
+                        <p class="leader-post">वार्ड नं० 11</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Ward Member" class="leader-img">
+                        <h3 class="leader-name">सपना देवी</h3>
+                        <p class="leader-post">वार्ड नं० 12</p>
+                    </div>
+                </div>
+             
+            </div>
+
+            <!-- PACS Adhyaksh -->
+            <h2 class="section-title text-center mt-5" data-aos="fade-up">पैक्स अध्यक्ष</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="PACS Adhyaksh" class="leader-img">
+                        <h3 class="leader-name">मो० रबुल हसन</h3>
+                        <p class="leader-post">पैक्स अध्यक्ष</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Muharram Committee -->
+            <h2 class="section-title text-center mt-5" data-aos="fade-up">मोहर्रम कमेटी</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Khalifa" class="leader-img">
+                        <h3 class="leader-name">मो० बदरुद्दीन</h3>
+                        <p class="leader-post">खलीफा</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Naibe Khalifa 1" class="leader-img">
+                        <h3 class="leader-name">मो० नौशाद</h3>
+                        <p class="leader-post">नाईब खलीफा 1</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-card">
+                        <img src="../img/committee/placeholder.jpg" alt="Naibe Khalifa 2" class="leader-img">
+                        <h3 class="leader-name">मो० शौकत</h3>
+                        <p class="leader-post">नाईब खलीफा 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title d-flex align-items-center">
+                        <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 28px; width: 28px; margin-right: 10px;">Milki
+                    </h5>
+                    <p>भागलपुर जिले का एक सांप्रदायिक सौहार्द और संस्कृति से समृद्ध ग्राम, जहाँ सभी धर्म और जातियों के लोग मिल-जुलकर रहते हैं और अपने त्योहारों तथा धार्मिक आयोजनों को उत्साहपूर्वक मनाते हैं।</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="leadership.html" class="text-white-50 text-decoration-none">नेतृत्व</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">गैलरी</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i> milkithb@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> मिल्की, बिहपुर, बिहार, भारत (853201)</p>
+                </div>
+            </div>
+            
+            <hr class="bg-white-50 my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Milki Village. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed & Developed by <span class="text-warning fw-bold">Team's of Raza Road</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

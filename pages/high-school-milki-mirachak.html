@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उच्च माध्यमिक विद्यायल मिल्की मिराचक - Milki Village</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .hero-section {
+            background: #fff;
+            color: #1e7e34;
+            padding: 140px 0 60px;
+            margin-top: 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .info-card {
+            background: #1e7e34;
+            color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .feature-box h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #155724 0%, #28a745 100%) !important;
+            color: #fff;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-item i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .location-box {
+            background: #1e7e34;
+            color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .badge-custom {
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 80px; width: 80px; margin-right: 10px;"> मिल्की
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fs-5 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">मुख्य पृष्ठ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="institutionDropdown" role="button" data-bs-toggle="dropdown">
+                            शैक्षणिक संस्थान
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="madarsha-islamia-mangan-shah.html">मदरसा इस्लामिया मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="middle-school-milki.html">राजकीयकृत मध्य विद्यालय मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item active" href="high-school-milki-mirachak.html">उच्च माध्यमिक विद्यायल मिल्की मिराचक</a></li>
+                            <li><a class="dropdown-item" href="kasturba-vidyalaya-milki.html">कस्तूरबा गांधी बालिका विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-milki.html">प्राथमिक विद्यालय मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-maktab-milki.html">प्राथमिक विद्यालय मक़तब मिल्की</a></li>
+                            <li><a class="dropdown-item" href="ps-shek-tola-milki.html">प्राथमिक विद्यालय शेख टोला मिल्की</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="religiousDropdown" role="button" data-bs-toggle="dropdown">
+                           धार्मिक स्थल
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="raza-jama-masjid-milki.html">रज़ा जामा मस्जिद मिल्की</a></li>
+                            <li><a class="dropdown-item" href="hazrat-mangan-shah-milki.html">हज़रत दाता मंगन शाह रहमतुल्लाह अलैह</a></li>
+                            <li><a class="dropdown-item" href="masjide-ansar.html">मस्जिदे अंसार</a></li>
+                            <li><a class="dropdown-item" href="hazrat-akbar-shah.html">हज़रत अकबर शाह रहमतुल्लाह अलैह</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leadership.html">नेतृत्व</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="committee.html">समिति</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">गैलरी</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold mb-3">उच्च माध्यमिक विद्यायल</h1>
+                    <h2 class="h3 mb-4">मिल्की मिराचक</h2>
+                    <p class="lead mb-4">भविष्य की नींव - कक्षा 9वीं से 12वीं तक की शिक्षा</p>
+                    <div>
+                        <span class="badge-custom"><i class="fas fa-graduation-cap me-2"></i>सरकारी विद्यालय</span>
+                        <span class="badge-custom"><i class="fas fa-map-marker-alt me-2"></i>14 नंबर रोड, मिल्की</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="info-card mb-4">
+                        <h3 class="section-title text-start" style="color: #ffd700;">विद्यालय के बारे में</h3>
+                        <p class="lead">उच्च माध्यमिक विद्यायल मिल्की मिराचक, मिल्की गांव का एक प्रतिष्ठित सरकारी शैक्षणिक संस्थान है। यह विद्यालय 14 नंबर रोड पर स्थित है, जहां कस्तूरबा गांधी बालिका विद्यालय और राजकीयकृत मध्य विद्यालय भी एक ही परिसर में स्थित हैं।</p>
+                        <p>यह विद्यालय कक्षा 9वीं से 12वीं तक की उच्चतर माध्यमिक शिक्षा प्रदान करता है। कक्षा 11वीं और 12वीं में विज्ञान (Science) और कला (Arts) संकाय की पढ़ाई होती है, जो छात्रों को उनके करियर के लिए एक मजबूत आधार प्रदान करता है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="stat-number">9-12</span>
+                        <span class="stat-label">कक्षाएं</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <i class="fas fa-flask"></i>
+                        <span class="stat-number">Science</span>
+                        <span class="stat-label">विज्ञान संकाय</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <span class="stat-number">Arts</span>
+                        <span class="stat-label">कला संकाय</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">अनुभवी शिक्षक</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up" style="color: #1e7e34;">विद्यालय की विशेषताएं</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="info-card">
+                        <i class="fas fa-school"></i>
+                        <h4>उच्च माध्यमिक शिक्षा</h4>
+                        <p>कक्षा 9वीं और 10वीं की माध्यमिक शिक्षा के साथ-साथ 11वीं और 12वीं के लिए विशेषीकृत उच्च माध्यमिक शिक्षा।</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="info-card">
+                        <i class="fas fa-atom"></i>
+                        <h4>विज्ञान और कला संकाय</h4>
+                        <p>कक्षा 11वीं और 12वीं के छात्रों के लिए विज्ञान (Science) और कला (Arts) दोनों संकायों में पढ़ाई की सुविधा।</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h4>सामूहिक शैक्षणिक परिसर</h4>
+                        <p>राजकीयकृत मध्य विद्यालय और कस्तूरबा गांधी बालिका विद्यालय के साथ एक ही परिसर में स्थित, जो एक बेहतर शैक्षणिक माहौल बनाता है।</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="info-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>सुविधाजनक स्थान</h4>
+                        <p>14 नंबर रोड, मिल्की पर स्थित होने के कारण यह विद्यालय छात्रों के लिए आसानी से सुलभ है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row" style="color: #1e7e34;">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-center" data-aos="fade-up">शैक्षणिक सुविधाएं</h2>
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-box">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>विविध पाठ्यक्रम</h5>
+                            <p class="mb-0">विज्ञान और कला संकाय में बिहार शिक्षा बोर्ड द्वारा निर्धारित सभी प्रमुख विषयों की पढ़ाई।</p>
+                        </div>
+                        <div class="feature-box">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>योग्य शिक्षक</h5>
+                            <p class="mb-0">सरकार द्वारा नियुक्त प्रशिक्षित और अनुभवी शिक्षक जो छात्रों को प्रतियोगी परीक्षाओं के लिए भी तैयार करते हैं।</p>
+                        </div>
+                        <div class="feature-box">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>प्रयोगशाला सुविधाएं</h5>
+                            <p class="mb-0">विज्ञान संकाय के छात्रों के लिए भौतिकी, रसायन विज्ञान और जीव विज्ञान की प्रयोगशालाएं।</p>
+                        </div>
+                        <div class="feature-box">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>करियर मार्गदर्शन</h5>
+                            <p class="mb-0">12वीं के बाद छात्रों को उनके करियर विकल्पों के लिए मार्गदर्शन और परामर्श प्रदान किया जाता है।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container" style="color: #1e7e34;">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="section-title">विद्यालय का महत्व</h2>
+                    <p class="lead mt-4">उच्च माध्यमिक विद्यायल मिल्की मिराचक क्षेत्र के युवाओं के लिए उच्च शिक्षा का एक महत्वपूर्ण केंद्र है। यह विद्यालय छात्रों को 12वीं के बाद विश्वविद्यालय स्तर की शिक्षा और व्यावसायिक पाठ्यक्रमों के लिए एक ठोस नींव प्रदान करता है। विज्ञान और कला दोनों संकायों की उपलब्धता छात्रों को अपनी रुचि के अनुसार विषय चुनने का अवसर देती है।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4"> 
+                    <h5 class="footer-title d-flex align-items-center"> 
+                        <img src="../img/logo/White_logo.png" alt="Milki Logo" style="height: 28px; width: 28px; margin-right: 10px;">Milki
+                    </h5> 
+                    <p>भागलपुर जिले का एक सांप्रदायिक सौहार्द और संस्कृति से समृद्ध ग्राम, जहाँ सभी धर्म और जातियों के लोग मिल-जुलकर रहते हैं और अपने त्योहारों तथा धार्मिक आयोजनों को उत्साहपूर्वक मनाते हैं।</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="leadership.html" class="text-white-50 text-decoration-none">नेतृत्व</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">गैलरी</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i> milkithb@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> मिल्की, बिहपुर, बिहार, भारत (853201)</p>
+                </div>
+            </div>
+            
+            <hr class="bg-white-50 my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Milki Village. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed & Developed by <span class="text-warning fw-bold">Team's of Raza Road</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
